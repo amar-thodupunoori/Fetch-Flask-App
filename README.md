@@ -32,11 +32,14 @@ Open your web browser and go to http://127.0.0.1:4000/ to view the app.
 ### Project Structure
 
 `app.py`: Flask application code.
+
 `templates/index_interactive.html`: HTML template with interactive Plotly plot.
+
 `requirements.txt`: Python dependencies.
+
 `Dockerfile`: Docker configuration file.
 
-Dependencies
+### Dependencies
 
 Flask==1.1.4
 Werkzeug==1.0.1
