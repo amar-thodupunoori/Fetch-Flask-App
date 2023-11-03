@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Count Prediction</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Monthly Predictions for 2022</h1>
+    <ul>
+        {% for entry in predictions %}
+            <li>{{ entry['month'] }}: {{ entry['prediction'] }}</li>
+        {% endfor %}
+    </ul>
+    
+    <div id="plotly-container"></div>
+    
+    <!-- JavaScript for creating Plotly plot -->
+
+    <script>
+        // Parse predictions data from JSON
+        var predictionsData = {{ predictions | tojson | safe | default('null') | replace("'", '"') | replace("\n", "") }};
+        
+        // Parse actual data from JSON
+        var actualData = {{ actual_data | tojson | safe | default('null') | replace("'", '"') | replace("\n", "") }};
+
+        // Create Plotly plot
+        var plotData = [
+            {
+                x: actualData.map(entry => entry.month),
+                y: actualData.map(entry => entry.actual),
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Actual Receipt Count',
+            },
+            {
+                x: predictionsData.map(entry => entry.month),
+                y: predictionsData.map(entry => entry.prediction),
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Predicted Receipt Count',
+            }
+        ];
+
+        Plotly.newPlot('plotly-container', plotData);
+    </script>
+
+</body>
+</html>
