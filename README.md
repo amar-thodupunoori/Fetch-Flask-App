@@ -20,13 +20,13 @@ Make sure you have Docker installed on your machine.
    cd your-repo
    ```
 3. Build the Docker image:
-  ```bash
-  docker build -t my-flask-app .
-  ```
+   ```bash
+   docker build -t my-flask-app .
+   ```
 4. Run the Docker container:
    ```bash
    docker run -p 4000:80 my-flask-app
-  ```
+   ```
 Open your web browser and go to http://127.0.0.1:4000/ to view the app.
 
 ### Project Structure
