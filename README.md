@@ -42,11 +42,16 @@ Open your web browser and go to http://127.0.0.1:4000/ to view the app.
 ### Dependencies
 
 Flask==1.1.4
+
 Werkzeug==1.0.1
+
 MarkupSafe==1.1.1
+
 pandas==1.3.3
+
 numpy==1.21.2
+
 matplotlib==3.4.3
 
-Author
+### Author
 Amar Thodupunoori
