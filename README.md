@@ -1,7 +1,6 @@
-# Fetch-Flask-App
-# Receipt Count Prediction App
+# Receipt Count Prediction Web App
 
-This Flask web application predicts monthly receipt counts for the year 2022 based on historical data. It includes user interaction and visualizations using Plotly.
+This web application predicts monthly receipt counts for the year 2022 based on historical data. It uses Flask for the backend, Plotly for interactive visualizations, and various Python libraries for data processing.
 
 ## Getting Started
 
@@ -9,12 +8,26 @@ This Flask web application predicts monthly receipt counts for the year 2022 bas
 
 Make sure you have Docker installed on your machine.
 
-### Build and Run the Docker Container
+### Running the App
 
-```bash
-docker build -t my-flask-app .
-docker run -p 4000:80 my-flask-app
-Visit http://localhost:4000/ in your web browser.
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd your-repo
+  ```
+3. Build the Docker image:
+  ```bash
+  docker build -t my-flask-app .
+  ```
+4. Run the Docker container:
+   ```bash
+   docker run -p 4000:80 my-flask-app
+  ```
+Open your web browser and go to http://127.0.0.1:4000/ to view the app.
 
 ### Project Structure
 
