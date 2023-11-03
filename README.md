@@ -18,7 +18,7 @@ Make sure you have Docker installed on your machine.
 2. Navigate to the project directory:
    ```bash
    cd your-repo
-  ```
+   ```
 3. Build the Docker image:
   ```bash
   docker build -t my-flask-app .
