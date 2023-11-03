@@ -13,7 +13,7 @@ Make sure you have Docker installed on your machine.
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone [https://github.com/your-username/your-repo.git](https://github.com/amar-thodupunoori/Fetch-Flask-App.git)
+   git clone https://github.com/amar-thodupunoori/Fetch-Flask-App.git
    ```
 2. Navigate to the project directory:
    ```bash
